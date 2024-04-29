@@ -1,0 +1,34 @@
+.container{
+    height:100vh;
+    width: 100vw;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #ffb703;
+}
+.circle{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 8px solid white;
+    background-color: #ffb703;
+    overflow: hidden;
+}
+.wave{
+    position: absolute;
+    height: 500%;
+    width: 500%;
+    background: linear-gradient(to right, #ffb703 50%, white 50%);
+    animation: wave-animation 2s infinite linear;
+}
+@keyframes wave-animation{
+    0%{
+        transform: translateX(-100%);
+        bottom: 50%;
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
